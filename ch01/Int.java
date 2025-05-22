@@ -5,20 +5,20 @@ public class Int {
 	public static void main(String[] args) {
 		byte byteValue1 = 10 ;
 		byte byteValue2 = 20 ;
-		// byte byteValue3 = byteValue1 + byteValue2 ; ÄÄÆÄÀÏ¿¡·¯
+		// byte byteValue3 = byteValue1 + byteValue2 ; ì»´íŒŒì¼ì—ëŸ¬
 		int intValue1 = byteValue1 + byteValue2 ;
 		System.out.println(intValue1);
 		
 		char charValue1 = 'A' ;	// 65
 		char charValue2 = 1 ;	// 1
-		// char charValue3 = charValue1 + charValue2 ; ÄÄÆÄÀÏ¿¡·¯
+		// char charValue3 = charValue1 + charValue2 ; ì»´íŒŒì¼ì—ëŸ¬
 		int intValue2 = charValue1 + charValue2 ;	// 65+1
-		System.out.println("À¯´ÏÄÚµå = " + intValue2);
-		System.out.println("Ãâ·Â¹®ÀÚ = " + (char)intValue2);
+		System.out.println("ìœ ë‹ˆì½”ë“œ = " + intValue2);
+		System.out.println("ì¶œë ¥ë¬¸ì = " + (char)intValue2);
 		
 		int intValue5 = 10 ;
-		// int intValue6 = 10 / 4.0 ; ÄÄÆÄÀÏ¿¡·¯
-		double doubleValue = intValue5 / 4.0 ;	// Å« °ªÀÌ double ÀÚµ¿Å¸ÀÔº¯È¯
+		// int intValue6 = 10 / 4.0 ; ì»´íŒŒì¼ì—ëŸ¬
+		double doubleValue = intValue5 / 4.0 ;	// í° ê°’ì´ double ìë™íƒ€ì…ë³€í™˜
 		System.out.println(doubleValue);
 
 	}

@@ -3,20 +3,20 @@ package ch01;
 public class AccuracyExam {
 
 	public static void main(String[] args) {
-		// »ç°ú 1°³¸¦ 10Á¶°¢À¸·Î ÂÉ°³¸é 1Á¶°¢ÀÌ 0.1·Î 1°³°¡ µÊ
+		// ì‚¬ê³¼ 1ê°œë¥¼ 10ì¡°ê°ìœ¼ë¡œ ìª¼ê°œë©´ 1ì¡°ê°ì´ 0.1ë¡œ 1ê°œê°€ ë¨.
 		
-		int apple = 1 ; // »ç°ú 1°³
-		double pieceUnit = 0.1 ; // Á¶°¢ ´ÜÀ§
-		int number = 7 ; // »ç°ú 1Á¶°¢
+		int apple = 1 ; // ì‚¬ê³¼ 1ê°œ
+		double pieceUint = 0.1 ; // ì¡°ê° ë‹¨ìœ„
+		int number = 7 ; // 7ê°œì˜ ì¡°ê°
 		
-		double result = apple - number * pieceUnit ;
-		System.out.println("»ç°ú 7Á¶°¢À» »­ : " + result);
+		double result = apple - number * pieceUint ;
+		System.out.println("ì‚¬ê³¼ 7ì¡°ê°ì„ ëºŒ : " + result);
 		// 0.29999999999999993
 		
-		System.out.println("7Á¶°¢ÀÇ °ª : " + number * pieceUnit);
+		System.out.println("7ì¡°ê°ì˜ ê°’ : " + number * pieceUint);
 		// 0.7000000000000001
 		
-		// Á¤È®ÇÑ °è»êÀ» À§ÇØ¼­´Â ½Ç¼ö Å¸ÀÔÀ» »ç¿ëÇÏÁö ¾Ê´Â °ÍÀÌ ÁÁ´Ù
+		// ê²°ë¡  ì •í™•í•œ ê³„ì‚°ì„ ìœ„í•´ì„œëŠ” ì‹¤ìˆ˜íƒ€ì…ì„ ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” ê²ƒì´ ì¢‹ë‹¤!!!
 
 	}
 

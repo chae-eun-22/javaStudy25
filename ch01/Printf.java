@@ -6,20 +6,20 @@ public class Printf {
 		int i = 97;
 		String s = "Java";
 		double f = 3.14f;
-		System.out.printf("%d\n", i); // 10Áø¼ö
-		System.out.printf("%o\n", i); // 8Áø¼ö
-		System.out.printf("%x\n", i); // 16Áø¼ö
+		System.out.printf("%d\n", i); // 10ì§„ìˆ˜
+		System.out.printf("%o\n", i); // 8ì§„ìˆ˜
+		System.out.printf("%x\n", i); // 16ì§„ìˆ˜
 		System.out.printf("%c\n", i); // char
-		System.out.printf("%5d\n", i); // 5Ä­ Áß ¿À¸¥ÂÊ¿¡ Àû°í ¾Õ¿¡´Â ºñ¿öµÒ
-		System.out.printf("%05d\n", i); // 5Ä­ Áß ¿À¸¥ÂÊ¿¡ Àû°í ¾Õ¿¡´Â 0À¸·Î Ã¤¿ò
-		System.out.printf("%s\n", s); // ¹®ÀÚ¿­ Ãâ·Â
-		System.out.printf("%5s\n", s); // 5Ä­ Áß ¿À¸¥ÂÊ¿¡ Àû°í ¾Õ¿¡ ºñ¿öµÒ
-		System.out.printf("%-5s\n", s);	// 5Ä­ Áß ¾Õ¿¡¼­ºÎÅÍ ÀûÁö¸¸ µÚ¿¡´Â ºñ¿öµÒ
+		System.out.printf("%5d\n", i); // 5ì¹¸ì„ ë§Œë“¤ê³  ì˜¤ë¥¸ìª½ì— ì ê³  ì•ì€ ê³µë°±
+		System.out.printf("%05d\n", i); // 5ì¹¸ì„ ë§Œë“¤ê³  ì˜¤ë¥¸ìª½ì— ì ê³  ì•ì€ 0ìœ¼ë¡œ ì±„ìš´ë‹¤.
+		System.out.printf("%s\n", s); // ë¬¸ìì—´ì„ ê·¸ëŒ€ë¡œ ì¶œë ¥
+		System.out.printf("%5s\n", s); // 5ì¹¸ì„ ë§Œë“¤ê³  ì˜¤ë¥¸ìª½ ì •ë ¬ í›„ ì•ì€ ê³µë°±
+		System.out.printf("%-5s\n", s);	// 5ì¹¸ì„ ë§Œë“¤ê³  ì™¼ìª½ ì •ë ¬ í›„ ë’¤ëŠ” ê³µë°±
 		System.out.printf("%f\n", f);
 		System.out.printf("%e\n", f);
-		System.out.printf("%4.1f\n", f); // 4Ä­ Áß ¿À¸¥ÂÊ¿¡ ÀûÀ¸¸ç ¼Ò¼öÁ¡ Ã¹¹øÂ° ÀÚ¸®±îÁö¸¸ ÀûÀ½ ¾Õ¿¡´Â ºñ¿öµÒ
-		System.out.printf("%04.1f\n", f); // 4Ä­ Áß ¼Ò¼öÁ¡ Ã¹¹øÂ° ÀÚ¸®±îÁö¸¸ Àû°í ¾Õ¿¡´Â 0À¸·Î Ã¤¿ò
-		System.out.printf("%-4.1f\n", f); // 4Ä­ Áß ¾Õ¿¡¼­ºÎÅÍ ÀûÁö¸¸ ¼Ò¼öÁ¡ Ã¹¹øÂ° ÀÚ¸®±îÁö¸¸ Àû°í µÚ¿¡´Â ºñ¿öµÒ
+		System.out.printf("%4.1f\n", f); // 4ê°œì˜ ì¹¸ì— ì†Œìˆ˜ì  ì²« ë²ˆì§¸ ìë¦¬ê¹Œì§€ë§Œ ì ê³  ë‚˜ë¨¸ì§€ëŠ” ê³µë°±
+		System.out.printf("%04.1f\n", f); // 4ê°œì˜ ì¹¸ì— ì†Œìˆ˜ì  ì²« ë²ˆì§¸ ìë¦¬ê¹Œì§€ë§Œ ì ê³  ì•ì— 0ìœ¼ë¡œ ì±„ìš´ë‹¤.
+		System.out.printf("%-4.1f\n", f); // 4ê°œì˜ ì¹¸ì— ì™¼ìª½ ì •ë ¬ì„ í•œ ë’¤ ì†Œìˆ˜ì  ì²« ë²ˆì§¸ ìë¦¬ê¹Œì§€ë§Œ ì ê³  ë‚˜ë¨¸ì§€ëŠ” ê³µë°±
 
 	}
 

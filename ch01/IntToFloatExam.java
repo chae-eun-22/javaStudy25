@@ -3,25 +3,25 @@ package ch01;
 public class IntToFloatExam {
 
 	public static void main(String[] args) {
-		// floatÀº 32bit·Î µÇ¾î ÀÖ´Â ºÎµ¿¼Ò¼öÁ¡ ¿¬»ê¿¡ »ç¿ëµÊ
-		// Á¤¼öÅ¸ÀÔÀ» ½Ç¼öÅ¸ÀÔÀ¸·Î º¯È¯ÇÒ ¶§ ¼Õ½ÇÀÌ ¹ß»ıÇÑ´Ù.
+		// floatì€ 32bitë¡œ ë˜ì–´ ìˆëŠ” ë¶€ë™ì†Œìˆ˜ì  ì—°ì‚°ì— ì‚¬ìš©ë¨
+		// ì •ìˆ˜íƒ€ì…ì„ ì‹¤ìˆ˜íƒ€ì…ìœ¼ë¡œ ë³€í™˜í•  ë•Œ ì†ì‹¤ì´ ë°œìƒí•œë‹¤.
 		// int(32bit) = float(32bit)
-
+		
 		int num1 = 123456780 ;
 		int num2 = 123456780 ;
-
-		float num3 = num2 ; // intÅ¸ÀÔ °ªÀ» float¿¡ ³ÖÀ½
-		num2 = (int) num3 ; // À§¿¡¼­ ¼±¾ğÇÑ º¯¼ö¿¡ °ªÀ» ´Ù½Ã ³ÖÀ½
-
+		
+		float num3 = num2 ; // intíƒ€ì… ê°’ì„ floatì— ë„£ìŒ
+		num2 = (int) num3 ; // ìœ„ì—ì„œ ì„ ì–¸í•œ ë³€ìˆ˜ì— ê°’ì„ ë‹¤ì‹œ ë„£ìŒ
+		
 		System.out.println("num1 : " + num1);
 		System.out.println("num2 : " + num2); // num2 : 123456784
 		System.out.println("num3 : " + num3);
-		// num3 : 1.23456784E8 -> Áö¼öÇü½ÄÀ¸·Î EÀ§¿¡ ¼ıÀÚ¸¦ ºÎµ¿ ¼Ò¼öÁ¡ Ã³¸®
-		//		  12.3456784E7
+		// num3 : 1.23456784E8 -> ì§€ìˆ˜í˜•ì‹ìœ¼ë¡œ Eìœ„ì— ìˆ«ìë¥¼ ë¶€ë™ ì†Œìˆ˜ì  ì²˜ë¦¬
+		// 		  12.3456784E7
 		//		  1234567.84E2
-
+		
 		int result = num1 - num2 ;
-		System.out.println("doubleÀ¸·Î ´Ù³à¿Â ÈÄ¿¡ num2 °ª º¯°æµÊ");
+		System.out.println("floatìœ¼ë¡œ ë‹¤ë…€ì˜¨ í›„ì— num2 ê°’ ë³€ê²½ë¨");
 		System.out.println("num1 - num2 : " + result);
 
 	}

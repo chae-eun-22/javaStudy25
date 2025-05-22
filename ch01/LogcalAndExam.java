@@ -1,44 +1,43 @@
 package ch01;
 
-import java.util.Scanner;
+import java.util.Scanner; // ì™¸ë¶€ë¼ì´ë¸ŒëŸ¬ë¦¬
 
 public class LogcalAndExam {
 
 	public static void main(String[] args) {
-		// ³í¸®°ö Å×½ºÆ®¿ë
-		// & ¿¬»êÀº ´ëºÎºÐ Á¶°ÇÀÌ 2°³ ÀÌ»óÀÏ °æ¿ì ÆÇ´ÜÇÏ´Â ¿ëµµ·Î »ç¿ëÇÑ´Ù.
-		// ¿¹¸¦ µé¾î id¿Í pw°¡ µÑ ´Ù ¸Â¾Æ¾ß ·Î±×ÀÎÀÌ ¼º°øÇÏ´Â °æ¿ì
-		// (°¡Áö°í ÀÖ´ø id == Å°º¸µå·Î ÀÔ·ÂÇÑ id) & (°¡Áö°í ÀÖ´ø pw == Å°º¸µå·Î ÀÔ·ÂÇÑ pw)
-		//				false				false			= false
-		//				true				false			= false
-		//				false				true			= false
-		//				true				true			= true
-
-		Scanner input = new Scanner(System.in); // Å°º¸µå·Î ÀÔ·ÂÇÒ ¼ö ÀÖ´Â °´Ã¼ »ý¼ºÇÔ
-		System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¸é ´ë¼Ò¹®ÀÚ³ª ¼ýÀÚ¸¦ ÆÇ´ÜÇØ µå¸±°Ô¿ä");
-		System.out.println("À¯´ÏÄÚµåÇ¥¸¦ Âü°íÇÏ¿© ÇÁ·Î±×·¥À» Á¦ÀÛÇÏ¿´½À´Ï´Ù.");
-		System.out.print("¼ýÀÚ ÀÔ·Â >>>");
-		int charCode = input.nextInt(); // Å°º¸µå·Î Á¤¼ö°ªÀÌ ÀÔ·ÂµÇ°í º¯¼ö¿¡ µé¾î°¨.
-
-		// if(ºñ±³ÆÇ´Ü¹®){	ºñ±³ÆÇ´Ü¹®ÀÌ true°ªÀÏ ¶§ ¼öÇàµÇ´Â ¹®	}
-		// else {	ºñ±³ÆÇ´Ü¹®ÀÌ false°ªÀÏ ¶§ ¼öÇàµÇ´Â ¹®	}
-		if ( (charCode >= 65) & (charCode <= 90) ) {
-			// ÀÔ·ÂµÈ ¼ýÀÚ °ªÀÌ 65ÀÌ»óÀÌ°í 90ÀÌÇÏÀÌ¸é ´ë¹®ÀÚ
-			System.out.println("ÇöÀç ÀÔ·ÂµÈ ¼ýÀÚ´Â ´ë¹®ÀÚÀÔ´Ï´Ù. : " + (char)charCode);
-		} else if( (charCode >= 97) && (charCode <= 122) ) {
-			// À§¿¡¼­ ½ÇÇàµÈ if°ªÀÌ falseÀÏ °æ¿ì ¶Ç ºñ±³¸¦ ÇÏ°Ô µÊ.
-			// ÀÔ·ÂµÈ ¼ýÀÚ °ªÀÌ 97ÀÌ»óÀÌ°í 122ÀÌÇÏÀÌ¸é ¼Ò¹®ÀÚ
-			// &&¸¦ »ç¿ëÇÏ¸é ºü¸¥ Ã³¸®¸¦ ÇÑ´Ù.(ÄÚµåÆ©´×)
-			System.out.println("ÇöÀç ÀÔ·ÂµÈ ¼ýÀÚ´Â ¼Ò¹®ÀÚÀÔ´Ï´Ù. : " + (char)charCode);
+		// ë…¼ë¦¬ê³± í…ŒìŠ¤íŠ¸ìš©
+		// & ì—°ì‚°ì€ ëŒ€ë¶€ë¶„ ì¡°ê±´ì´ 2ê°œ ì´ìƒì¼ ê²½ìš° íŒë‹¨í•˜ëŠ” ìš©ë„ë¡œ ì‚¬ìš©í•œë‹¤.
+		// ì˜ˆë¥¼ ë“¤ì–´ idì™€ pwê°€ ë‘˜ ë‹¤ ë§žì•„ì•¼ ë¡œê·¸ì¸ì´ ì„±ê³µí•˜ëŠ” ê²½ìš°
+		// (ê°€ì§€ê³  ìžˆë˜ id == í‚¤ë³´ë“œë¡œ ìž…ë ¥í•œ id) & (ê°€ì§€ê³  ìžˆë˜ pw == í‚¤ë³´ë“œë¡œ ìž…ë ¥í•œ pw)
+		//				false								false				= false
+		//				true								false				= false
+		//				false								true				= false
+		//				true								true				= true
+		
+		Scanner input = new Scanner(System.in); // í‚¤ë³´ë“œë¡œ ìž…ë ¥í•  ìˆ˜ ìžˆëŠ” ê°ì²´ ìƒì„±í•¨
+		System.out.println("ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œë©´ ëŒ€ì†Œë¬¸ìžë‚˜ ìˆ«ìžë¥¼ íŒë‹¨í•´ ë“œë¦´ê²Œìš”");
+		System.out.println("ìœ ë‹ˆì½”ë“œí‘œë¥¼ ì°¸ê³ í•˜ì—¬ í”„ë¡œê·¸ëž¨ì„ ì œìž‘í•˜ì˜€ìŠµë‹ˆë‹¤.");
+		System.out.print("ìˆ«ìž ìž…ë ¥ >>>");
+		int charCode = input.nextInt();	// í‚¤ë³´ë“œë¡œ ì •ìˆ˜ê°’ì´ ìž…ë ¥ë˜ê³  ë³€ìˆ˜ì— ë“¤ì–´ê°. 
+		
+		// if(ë¹„êµíŒë‹¨ë¬¸){		ë¹„êµíŒë‹¨ë¬¸ì´ trueê°’ì¼ ë•Œ ìˆ˜í–‰ë˜ëŠ” ë¬¸	}
+		// else {	ë¹„êµíŒë‹¨ë¬¸ì´ falseê°’ì¼ ë•Œ ìˆ˜í–‰ë˜ëŠ” ë¬¸	}
+		if( (charCode >= 65) & (charCode <= 90) ) {
+			// ìž…ë ¥ëœ ìˆ«ìž ê°’ì´ 65ì´ìƒì´ê³  90ì´í•˜ì´ë©´ ëŒ€ë¬¸ìž
+			System.out.println("í˜„ìž¬ ìž…ë ¥ëœ ìˆ«ìžëŠ” ëŒ€ë¬¸ìžìž…ë‹ˆë‹¤. : " + (char)charCode);
+		} else if( (charCode>=97) && (charCode<=122) ) {
+			// ìœ„ì—ì„œ ì‹¤í–‰ëœ ifê°’ì´ falseì¼ ê²½ìš° ë˜ ë¹„êµë¥¼ í•˜ê²Œ ë¨.
+			// ìž…ë ¥ëœ ìˆ«ìž ê°’ì´ 97ì´ìƒì´ê³  122ì´í•˜ì´ë©´ ì†Œë¬¸ìž
+			// &&ë¥¼ ì‚¬ìš©í•˜ë©´ ë¹ ë¥¸ ì²˜ë¦¬ë¥¼ í•œë‹¤.(ì½”ë“œíŠœë‹)
+			System.out.println("í˜„ìž¬ ìž…ë ¥ëœ ìˆ«ìžëŠ” ì†Œë¬¸ìžìž…ë‹ˆë‹¤. : " +(char)charCode);
 		} else if( !(charCode < 48) && !(charCode > 57) ) {
-			// NAND °³³äÀÌ´Ù. µå¸ð¸£°£ÀÇ¹ýÄ¢À» ÆÄ¾ÇÇÏ¸é NOR
-			// 48º¸´Ù ÀÛÁö¾Ê°í 57º¸´Ù Å©Áö¾ÊÀº ºñ±³¹®
-			System.out.println("ÇöÀç ÀÔ·ÂµÈ ¼ýÀÚ´Â À¯´ÏÄÚµåÀÇ ¹®ÀÚÇü ¼ýÀÚÀÔ´Ï´Ù. : " + (char)charCode);
+			// NAND ê°œë…ì´ë‹¤. ë“œëª¨ë¥´ê°„ì˜ë²•ì¹™ì„ íŒŒì•…í•˜ë©´ NOR
+			// 48ë³´ë‹¤ ìž‘ì§€ì•Šê³  57ë³´ë‹¤ í¬ì§€ì•Šì€ ë¹„êµë¬¸
+			System.out.println("í˜„ìž¬ ìž…ë ¥ëœ ìˆ«ìžëŠ” ìœ ë‹ˆì½”ë“œì˜ ë¬¸ìží˜• ìˆ«ìžìž…ë‹ˆë‹¤. : " +(char)charCode);
 		} else {
-			System.out.println("´ë¹®ÀÚ, ¼Ò¹®ÀÚ, ¼ýÀÚÀÇ À¯´ÏÄÚµå Ç¥¿¡ ¾ø´Â ¼ýÀÚÀÔ´Ï´Ù.");
-			System.out.println("ÇÁ·Î±×·¥À» ´Ù½Ã ½ÇÇàÇØÁÖ¼¼¿ä.");
-		} // ´ÙÁß if¹® Á¾·á
+			System.out.println("ëŒ€ë¬¸ìž, ì†Œë¬¸ìž, ìˆ«ìžì˜ ìœ ë‹ˆì½”ë“œ í‘œì— ì—†ëŠ” ìˆ«ìžìž…ë‹ˆë‹¤.");
+			System.out.println("í”„ë¡œê·¸ëž¨ì„ ë‹¤ì‹œ ì‹¤í–‰í•´ì£¼ì„¸ìš”.");
+		} // ë‹¤ì¤‘ ifë¬¸ ì¢…ë£Œ
+	} // main ë©”ì„œë“œ ì¢…ë£Œ
 
-	} // main ¸Þ¼­µå Á¾·á
-
-} // class Á¾·á
+} // class ì¢…ë£Œ

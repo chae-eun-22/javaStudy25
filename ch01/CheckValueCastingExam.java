@@ -6,12 +6,12 @@ public class CheckValueCastingExam {
 		int i = 128 ;
 		
 		if( (i<Byte.MIN_VALUE)||(i>Byte.MAX_VALUE)) {
-			// iÀÇ °ªÀÌ ByteÀÇ ÃÖ¼Ò°ªº¸´Ù ÀÛ°Å³ª ÃÖ´ë°ªº¸´Ù Å©¸é
-			System.out.println("byteÅ¸ÀÔÀ¸·Î º¯È¯ÇÒ ¼ö ¾ø½À´Ï´Ù.");
-			System.out.println(Byte.MIN_VALUE + "°ªº¸´Ù ÀÛ°Å³ª");
-			System.out.println(Byte.MAX_VALUE + "°ªº¸´Ù Å®´Ï´Ù.");
+			// iê°’ì´ Byteì˜ ìµœì†Œê°’ë³´ë‹¤ ì‘ê±°ë‚˜ ìµœëŒ€ê°’ë³´ë‹¤ í¬ë©´
+			System.out.println("byteíƒ€ì…ìœ¼ë¡œ ë³€í™˜í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+			System.out.println(Byte.MIN_VALUE + "ê°’ë³´ë‹¤ ì‘ê±°ë‚˜");
+			System.out.println(Byte.MAX_VALUE + "ê°’ë³´ë‹¤ í½ë‹ˆë‹¤.");
 		} else {
-			byte b = (byte) i ; // int¸¦ byte·Î °­Á¦Å¸ÀÔº¯È¯
+			byte b = (byte) i ; // intë¥¼ byteë¡œ ê°•ì œíƒ€ì…ë³€í™˜
 			System.out.println(b);
 		}
 

@@ -3,26 +3,26 @@ package ch01;
 public class IntToDouble {
 
 	public static void main(String[] args) {
-		// intÅ¸ÀÔ°ú floatÅ¸ÀÔÀº °°Àº 32bitÀ» »ç¿ëÇÏÁö¸¸
-		// floatÀÌ ¼Ò¼öÁ¡À» »ç¿ëÇÏ±â ¶§¹®¿¡ °ª¿¡ º¯Á¶°¡ ÀÏ¾î³²
-
-		// floatº¸´Ù Å« double¸¦ »ç¿ëÇÏ¿© ÇØ°áÇØº¸ÀÚ.
-
+		// intíƒ€ì…ê³¼ floatíƒ€ì…ì€ ê°™ì€ 32bitì„ ì‚¬ìš©í•˜ì§€ë§Œ
+		// floatì´ ì†Œìˆ˜ì ì„ ì‚¬ìš©í•˜ê¸° ë•Œë¬¸ì— ê°’ì— ë³€ì¡°ê°€ ì¼ì–´ë‚¨
+		
+		// floatë³´ë‹¤ í° doubleë¥¼ ì‚¬ìš©í•˜ì—¬ í•´ê²°í•´ë³´ì.
+		
 		int num1 = 123456780 ;
 		int num2 = 123456780 ;
-
-		double num3 = num2 ; // intÅ¸ÀÔ °ªÀ» float¿¡ ³ÖÀ½
-		num2 = (int) num3 ; // À§¿¡¼­ ¼±¾ğÇÑ º¯¼ö¿¡ °ªÀ» ´Ù½Ã ³ÖÀ½
+		
+		double num3 = num2 ; // intíƒ€ì… ê°’ì„ floatì— ë„£ìŒ
+		num2 = (int) num3 ; // ìœ„ì—ì„œ ì„ ì–¸í•œ ë³€ìˆ˜ì— ê°’ì„ ë‹¤ì‹œ ë„£ìŒ
 		
 		System.out.println("num1 : " + num1);
 		System.out.println("num2 : " + num2); // num2 : 123456784
 		System.out.println("num3 : " + num3);
-		// num3 : 1.23456784E8 -> Áö¼öÇü½ÄÀ¸·Î EÀ§¿¡ ¼ıÀÚ¸¦ ºÎµ¿ ¼Ò¼öÁ¡ Ã³¸®
-		//		  12.3456784E7
+		// num3 : 1.23456784E8 -> ì§€ìˆ˜í˜•ì‹ìœ¼ë¡œ Eìœ„ì— ìˆ«ìë¥¼ ë¶€ë™ ì†Œìˆ˜ì  ì²˜ë¦¬
+		// 		  12.3456784E7
 		//		  1234567.84E2
 		
 		int result = num1 - num2 ;
-		System.out.println("doubleÀ¸·Î ´Ù³à¿Â ÈÄ¿¡ num2 °ª º¯°æ¾ÈµÊ");
+		System.out.println("doubleìœ¼ë¡œ ë‹¤ë…€ì˜¨ í›„ì— num2 ê°’ ë³€ê²½ì•ˆë¨");
 		System.out.println("num1 - num2 : " + result);
 
 	}

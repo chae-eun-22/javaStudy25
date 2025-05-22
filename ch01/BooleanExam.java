@@ -6,9 +6,9 @@ public class BooleanExam {
 		boolean stop = false ;
 		
 		if(stop) {
-			System.out.println("ÁßÁöÇÕ´Ï´Ù.");
+			System.out.println("ì¤‘ì§€í•©ë‹ˆë‹¤.");
 		} else {
-			System.out.println("Ãâ¹ßÇÕ´Ï´Ù.");
+			System.out.println("ì¶œë°œí•©ë‹ˆë‹¤.");
 		}
 
 	}

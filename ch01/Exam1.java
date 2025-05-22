@@ -7,12 +7,12 @@ public class Exam1 {
 	public static void main(String[] args) {
 		double w, h, area ;
 		Scanner in = new Scanner(System.in);
-		System.out.println("Á÷»ç°¢ÇüÀÇ °¡·Î ±æÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì§ì‚¬ê°í˜•ì˜ ê°€ë¡œ ê¸¸ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		w = in.nextDouble();
-		System.out.println("Á÷»ç°¢ÇüÀÇ ¼¼·Î ±æÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì§ì‚¬ê°í˜•ì˜ ì„¸ë¡œ ê¸¸ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		h = in.nextDouble();
 		area = w * h ;
-		System.out.println("Á÷»ç°¢ÇüÀÇ ³ĞÀÌ´Â " + area + "ÀÔ´Ï´Ù.");
+		System.out.println("ì§ì‚¬ê°í˜•ì˜ ë„“ì´ëŠ” " + area + "ì…ë‹ˆë‹¤.");
 
 	}
 
