@@ -152,8 +152,6 @@ public class methodExam {
 				System.out.println(id + "님이 입력하신 수학 점수는 " + math + "점 입니다. 다시 입력해주세요.");
 			} // 수학 점수 if문
 			
-			score = kor + eng + math;
-			avg = (double)score / 3;
 			
 			if (avg > 0 && avg <= 100) { // 0보다 크거나 100이하이면 true
 				if (avg >= 90) {
@@ -177,9 +175,9 @@ public class methodExam {
 				System.out.println(id + "님 0~100까지만 입력 가능합니다. 국어 점수부터 다시 입력해주세요.");
 			} // 평균 등급 if문 종료
 			
-		} // while(korr)문 종료
+		} // while문 종료
 
-		return session; // 
+		return session; // 리턴
 
 	} // Grade 메서드 종료
 
