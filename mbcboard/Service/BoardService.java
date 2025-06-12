@@ -53,7 +53,7 @@ public class BoardService {
 
 			case "5":
 				System.out.println("게시글 삭제 메서드로 진입합니다.");
-				deleteOne(session);
+				deleteOne(inputStr, session);
 				break;
 
 			case "6":
@@ -64,6 +64,7 @@ public class BoardService {
 
 			default:
 				System.out.println("1~6번까지만 입력하세요.");
+				break;
 
 			} // switch문(부메뉴) 종료
 
@@ -73,14 +74,18 @@ public class BoardService {
 
 	} // subMenu 메서드 종료
 
-	private MemberDTO deleteOne(MemberDTO session) throws SQLException {
-		// 게시물의 번호를 받아 삭제한다.
-		Scanner inputInt = new Scanner(System.in);
+	private MemberDTO deleteOne(Scanner inputStr, MemberDTO session) throws SQLException {
+		// 게시물의 제목를 받아 현재 로그인한 아이디와 입력한 비밀번호가 동일해야 하고 게시물의 아이디가 동일하면 삭제한다.
+		
+		System.out.println("현재 로그인 되어 있는 아이디: " + session.getId());
 
-		System.out.println("삭제하려는 게시글의 번호를 입력하세요.");
-		System.out.print(">>>");
-		int selectBno = inputInt.nextInt();
-		boardDAO.deleteOne(selectBno, session);
+		System.out.println("삭제하려는 게시글의 제목을 입력하세요: ");
+		String selecttitle = inputStr.next();
+		
+		System.out.print("본인의 게시글만 삭제 가능합니다. 비밀번호를 입력하세요: ");
+		String pw = inputStr.next();
+		
+		boardDAO.deleteOne(selecttitle, pw, session);
 		
 		return session;
 
@@ -88,12 +93,15 @@ public class BoardService {
 
 	private MemberDTO modify(Scanner inputStr, MemberDTO session) throws SQLException {
 		// 제목을 찾아서 내용을 수정한다
+		
+		System.out.println("현재 로그인 되어 있는 아이디: " + session.getId());
 
 		System.out.print("수정하려는 게시글의 제목을 입력하세요: ");
-		String title = inputStr.next();
+		inputStr.nextLine();
+		String title = inputStr.nextLine();
 		
 		System.out.print("본인의 게시글만 수정 가능합니다. 비밀번호를 입력하세요: ");
-		String pw = inputStr.next();
+		String pw = inputStr.nextLine();
 
 		boardDAO.modify(title, pw, inputStr, session);
 		System.out.println("==============끝=============");
@@ -123,6 +131,8 @@ public class BoardService {
 		Scanner inputLine = new Scanner(System.in);
 
 		BoardDTO boardDTO = new BoardDTO(); // 빈객체 생성
+		
+		System.out.println("현재 로그인 되어 있는 아이디: " + session.getId());
 
 		System.out.println("작성자: " + session.getName());
 

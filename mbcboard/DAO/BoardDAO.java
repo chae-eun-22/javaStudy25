@@ -192,37 +192,38 @@ public class BoardDAO {
 	public MemberDTO modify(String title, String pw, Scanner inputStr, MemberDTO session) throws SQLException {
 		// 제목을 찾아서 내용을 수정
 
-		Scanner inputLine = new Scanner(System.in);
-
 		BoardDTO boardDTO = new BoardDTO();
+
+		inputStr.nextLine(); // 버퍼 비우기
+
+		System.out.println("[수정할 내용을 입력하세요]");
+		System.out.print("제목: ");
+		boardDTO.setBtitle(inputStr.nextLine());
+
+		System.out.print("내용: ");
+		boardDTO.setBcontent(inputStr.nextLine());
 
 		try {
 
 			String sql = "UPDATE board SET btitle=?, bcontent=?, bdate=sysdate " + "WHERE btitle=? AND EXISTS ("
-					+ "SELECT 1 FROM member WHERE id = board.writer AND pw=?)";
+					+ "SELECT 1 FROM member WHERE id = bwriter and pw=? and id=?)";
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, boardDTO.getBtitle());
 			preparedStatement.setString(2, boardDTO.getBcontent());
 			preparedStatement.setString(3, title);
-			preparedStatement.setString(4, session.getPw());
+			preparedStatement.setString(4, pw);
+			preparedStatement.setString(5, session.getId());
 
 			result = preparedStatement.executeUpdate(); // 쿼리문 실행 후 결과를 정수로 보냄
 
 			if (result > 0) {
 
-				System.out.println("[수정할 내용을 입력하세요]");
-				System.out.print("제목: ");
-				boardDTO.setBtitle(inputStr.next());
-
-				System.out.print("내용: ");
-				boardDTO.setBcontent(inputLine.nextLine());
-
-				System.out.println(result + "개의 데이터가 수정되었습니다.");
+				System.out.println(session.getName() +"님 " + result + "개의 게시글이 수정되었습니다.");
 				connection.commit(); // 영구 저장
 
 			} else {
 
-				System.out.println("수정이 되지 않았습니다.");
+				System.out.println(session.getName() + "님 본인의 게시글이 아니거나 비밀번호가 틀려 수정이 되지 않았습니다.");
 				connection.rollback();
 
 			} // if문 종료
@@ -234,32 +235,37 @@ public class BoardDAO {
 
 		} finally {
 
-			preparedStatement.close();
+			if (preparedStatement != null) {
+				preparedStatement.close();
+			}
 
 		}
 
 		return session;
 	}
 
-	public MemberDTO deleteOne(int selectBno, MemberDTO session) throws SQLException {
+	public MemberDTO deleteOne(String selecttitle, String pw, MemberDTO session) throws SQLException {
 		// 서비스에서 받은 게시물의 번호를 이용하여 데이터를 삭제
 
 		try {
 
-			String sql = "delete from board where bno=?";
+			String sql = "delete from board where btitle=? AND EXISTS ("
+					+ "SELECT 1 FROM member WHERE id = bwriter and pw=? and id=?)";
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1, selectBno);
+			preparedStatement.setString(1, selecttitle);
+			preparedStatement.setString(2, pw);
+			preparedStatement.setString(3, session.getId());
 
 			result = preparedStatement.executeUpdate(); // 쿼리문 실행 후 결과를 정수로 리턴
 
 			if (result > 0) {
 
-				System.out.println(result + "게시물이 삭제되었습니다.");
+				System.out.println(session.getName() + "님 " + result + "개의 게시물이 삭제되었습니다.");
 				connection.rollback();
 
 			} else {
 
-				System.out.println("게시물이 삭제되지 않았습니다.");
+				System.out.println(session.getName() + "님 본인의 게시물이 아니거나 비밀번호가 틀려 게시물이 삭제되지 않았습니다.");
 				connection.rollback();
 
 			}

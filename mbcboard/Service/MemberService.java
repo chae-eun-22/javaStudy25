@@ -69,6 +69,7 @@ public class MemberService {
 
 			default:
 				System.out.println("1~6번까지만 입력하세요.");
+				break;
 				
 			} // switch문(부메뉴) 종료
 
@@ -93,7 +94,7 @@ public class MemberService {
 	private MemberDTO deleteOne(Scanner inputStr, MemberDTO session) throws SQLException {
 		// 회원 아이디와 비밀번호를 받아 삭제한다.
 
-		System.out.println("현재 로그인 되어있는 아이디는: " + session.getId() + "입니다.");
+		System.out.println("현재 로그인 되어 있는 아이디: " + session.getId());
 		
 		System.out.println("탈퇴하려는 회원의 아이디를 입력하세요: ");
 		String selectid = inputStr.next();
@@ -123,7 +124,7 @@ public class MemberService {
 	private MemberDTO modify(Scanner inputStr, MemberDTO session) throws SQLException {
 		// 아이디를 찾아서 회원정보를 수정한다
 		
-		System.out.println("현재 로그인 되어있는 아이디는: " + session.getId() + "입니다.");
+		System.out.println("현재 로그인 되어 있는 아이디: " + session.getId());
 
 		System.out.print("비밀번호를 입력하세요: ");
 		String pw = inputStr.next();
@@ -138,7 +139,7 @@ public class MemberService {
 	private MemberDTO readOne(MemberDAO memberDAO, Scanner inputStr, MemberDTO session) throws SQLException {
 		// 회원정보 보기 메서드
 
-		System.out.println("현재 로그인 되어있는 아이디는: " + session.getId() + "입니다.");
+		System.out.println("현재 로그인 되어 있는 아이디: " + session.getId());
 		
 		session.getId();
 		
